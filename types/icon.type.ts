@@ -1,1 +1,1 @@
-export type IconName = 'sun' | 'moon';
+export type IconName = 'sun' | 'moon' | 'menu' | 'close';
