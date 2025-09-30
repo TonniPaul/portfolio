@@ -1,7 +1,11 @@
-import SplashCursor from '@/components/animations/splash-cursor';
-import { ThemeProvider } from '@/components/theme-provider';
 import type { Metadata } from 'next';
 import { Onest } from 'next/font/google';
+import { GoogleTagManager } from '@next/third-parties/google';
+
+import SplashCursor from '@/components/animations/splash-cursor';
+// import Header from '@/components/header';
+import { ThemeProvider } from '@/components/theme-provider';
+
 import './globals.css';
 
 const font = Onest({ subsets: ['latin'] });
@@ -26,12 +30,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* <Header /> */}
+
           <main className="min-h-screen grid place-items-center">
             {children}
           </main>
 
           <SplashCursor />
         </ThemeProvider>
+
+        <GoogleTagManager gtmId="G-NJQP8WLF5F" />
       </body>
     </html>
   );
