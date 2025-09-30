@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Onest } from 'next/font/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 import SplashCursor from '@/components/animations/splash-cursor';
 import Header from '@/components/header';
@@ -37,6 +38,8 @@ export default function RootLayout({
 
           <SplashCursor />
         </ThemeProvider>
+
+        <GoogleTagManager gtmId="G-NJQP8WLF5F" />
       </body>
     </html>
   );
