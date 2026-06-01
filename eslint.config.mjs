@@ -1,22 +1,13 @@
-import js from '@eslint/js';
 import { FlatCompat } from '@eslint/eslintrc';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
   baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
 });
 
-const eslintConfig = [
-  ...compat.config({
-    extends: [
-      'eslint:recommended',
-      'plugin:@typescript-eslint/recommended',
-      'next',
-      'next/core-web-vitals',
-      'prettier',
-    ],
-    plugins: ['@typescript-eslint'],
+export default defineConfig([
+  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  {
     rules: {
       'space-before-function-paren': 'off',
       '@typescript-eslint/space-before-function-paren': 'off',
@@ -32,8 +23,6 @@ const eslintConfig = [
       '@next/next/no-document-import-in-page': 'off',
       'react/display-name': 'off',
     },
-  }),
-  { ignores: ['.next/', 'node_modules/'] },
-];
-
-export default eslintConfig;
+  },
+  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
+]);
