@@ -117,7 +117,7 @@ const Lanyard = ({ imageSrc, name, qrCodeSrc, skills, role }: Props) => {
               <span className="text-white font-semibold text-[11px] tracking-[0.18em] uppercase">
                 TonniPaul.com
               </span>
-              <span className="text-white/55 text-[9px] font-mono tracking-[0.15em] uppercase mt-1">
+              <span className="text-white/65 text-[9px] font-mono tracking-[0.15em] uppercase mt-1">
                 Digital Identity Card
               </span>
             </div>
@@ -142,7 +142,7 @@ const Lanyard = ({ imageSrc, name, qrCodeSrc, skills, role }: Props) => {
               >
                 {name}
               </p>
-              <p className="text-primary text-a-10 font-semibold mt-0.5">
+              <p className="text-primary-700  text-a-10 font-semibold mt-0.5">
                 {role}
               </p>
 
@@ -152,7 +152,7 @@ const Lanyard = ({ imageSrc, name, qrCodeSrc, skills, role }: Props) => {
                 {skills.map((t) => (
                   <span
                     key={t}
-                    className="text-primary text-a-10 font-mono px-2 py-0.5 rounded-full bg-white/5 border border-[rgba(125,68,168,0.5)]"
+                    className="text-primary-700 text-a-10 font-mono px-2 py-0.5 rounded-full bg-white/10 border border-[rgba(192,132,252,0.4)]"
                   >
                     {t}
                   </span>
