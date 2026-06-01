@@ -10,6 +10,7 @@
   --background: #e0e0e0;
   --foreground: #171717;
   --primary: #7d44a8;
+  --primary-700: #c084f5;
   --primary-dark: #060010;
 }
 
@@ -22,6 +23,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primary-700: #c084f5;
 
   --spacing-a-250: 250px;
   --spacing-a-300: 300px;
