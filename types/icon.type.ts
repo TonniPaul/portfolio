@@ -9,4 +9,7 @@ export type IconName =
   | 'instagram'
   | 'github'
   | 'linkedin'
-  | 'twitter';
+  | 'twitter'
+  | 'chevron-down'
+  | 'laptop-project'
+  | 'check-fill';
