@@ -123,21 +123,21 @@ const Lanyard = ({ imageSrc, name, qrCodeSrc, skills, role }: Props) => {
             </div>
 
             <div className="flex flex-col items-center pt-6 pb-4 px-5 z-1">
-              <div className="w-24 h-24 rounded-2xl overflow-hidden mb-4 relative">
+              <div className="w-24 h-24 rounded-2xl overflow-hidden mb-4 relative isolate">
                 <Image
                   src={imageSrc}
                   alt={name}
-                  className="w-full h-full object-cover"
+                  className="object-cover"
                   fill
                   sizes="100%"
                 />
 
-                <div className="absolute inset-0 rounded-2xl pointer-events-none bg-[linear-gradient(135deg,rgba(255,255,255,0.12)_0%,transparent_60%)]" />
+                <div className="absolute inset-0 -z-1 rounded-2xl pointer-events-none bg-[linear-gradient(135deg,rgba(255,255,255,0.12)_0%,transparent_60%)]" />
               </div>
 
               <p
                 className={cn(
-                  'text-white text-a-12 font-bold text-lg tracking-tight leading-tight text-center'
+                  'text-white! text-a-12 font-bold text-lg tracking-tight leading-tight text-center'
                 )}
               >
                 {name}

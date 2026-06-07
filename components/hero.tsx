@@ -139,7 +139,7 @@ const HeroSection = () => {
 
           <div className="relative">
             <Lanyard
-              imageSrc="/assets/head-shot.jpeg"
+              imageSrc="/assets/head-shot.jpg"
               qrCodeSrc="/assets/qr-code.png"
               name="Paul Oluwatoni Ariyo-Adeoye"
               skills={skills}
