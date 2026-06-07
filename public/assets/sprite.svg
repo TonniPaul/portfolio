@@ -71,5 +71,17 @@
             d="M8 7a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v8a1 1 0 1 1-2 0V9.414l-8.293 8.293a1 1 0 0 1-1.414-1.414L14.586 8H9a1 1 0 0 1-1-1"></path>
       </symbol>
 
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="chevron-down">
+         <path fill="currentColor" d="M7.41 8.58L12 13.17l4.59-4.59L18 10l-6 6l-6-6z"></path>
+      </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="laptop-project">
+    <path fill="currentColor" fill-rule="evenodd" d="M4.75.75h18.5v14.5h-5v-9.5H4.75zm-2 7h13.5v9.009l1.91 4.777l.686 1.714H.154l.686-1.714l1.91-4.777zm2.5 8h8.5v-5.5h-8.5z" clip-rule="evenodd"></path>
+  </symbol>
+
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="check-fill">
+    <path fill="currentColor" fill-rule="evenodd" d="M12 21a9 9 0 1 0 0-18a9 9 0 0 0 0 18m-.232-5.36l5-6l-1.536-1.28l-4.3 5.159l-2.225-2.226l-1.414 1.414l3 3l.774.774z" clip-rule="evenodd"></path>
+  </symbol>
+
    </def>
 </svg>

@@ -4,9 +4,8 @@ import Lanyard from './lanyard';
 import SvgIcon from './svg-icon';
 import Motion from './motion';
 import { socials } from '@/utils/constants';
-import Modal from './modal';
 import { Button } from './button';
-import RebuildNotice from './rebuild-notice';
+import SectionBadge from './section-badge';
 
 const HeroSection = () => {
   return (
@@ -41,21 +40,9 @@ const HeroSection = () => {
         <div className="h-24 w-24 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-xl" />
       </Motion>
 
-      <div className="relative z-10 flex w-full from-background flex-col items-center justify-between gap-20 py-32 lg:flex-row">
+      <div className="relative z-10 flex w-full from-background flex-col items-center justify-between gap-20 app-padding-b pt-32 lg:flex-row">
         <div className="">
-          <Motion
-            as="div"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 backdrop-blur-md"
-          >
-            <SvgIcon name="sparkles" className="h-4 w-4 text-primary" />
-
-            <span className="text-a-10 md:text-sm font-medium text-primary">
-              CUSTOM SOFTWARE SOLUTIONS_
-            </span>
-          </Motion>
+          <SectionBadge text="CUSTOM SOFTWARE SOLUTIONS_" />
 
           <Motion
             as={'h1'}
@@ -75,13 +62,9 @@ const HeroSection = () => {
             <br />
             World_
           </Motion>
+
           <Motion
             as={'p'}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 1,
-            }}
             className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/70 md:text-xl"
           >
             Through thoughtful design and clean code, I create digital products
@@ -90,19 +73,14 @@ const HeroSection = () => {
           </Motion>
 
           <Motion
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 1.2,
             }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <Modal
-              trigger={<Button withIcon>VIEW PROJECTS</Button>}
-              className="app-padding"
-            >
-              <RebuildNotice />
-            </Modal>
+            <a href="#projects">
+              <Button withIcon>Browse PROJECTS</Button>
+            </a>
           </Motion>
 
           <Motion
