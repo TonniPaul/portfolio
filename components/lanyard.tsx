@@ -137,7 +137,7 @@ const Lanyard = ({ imageSrc, name, qrCodeSrc, skills, role }: Props) => {
 
               <p
                 className={cn(
-                  'text-white text-a-12 font-bold text-lg tracking-tight leading-tight text-center'
+                  'text-white! text-a-12 font-bold text-lg tracking-tight leading-tight text-center'
                 )}
               >
                 {name}
