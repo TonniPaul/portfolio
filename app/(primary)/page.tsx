@@ -1,10 +1,14 @@
 import Carousel from '@/components/carousel';
-import FeaturedProject from '@/components/featured-projects';
+import FeaturedProject, {
+  FeaturedProjectSkeleton,
+} from '@/components/featured-projects';
 import HeroSection from '@/components/hero';
 import Motion from '@/components/motion';
+import { ProjectListItemSkeleton } from '@/components/project-list-item';
 import ProjectsList from '@/components/projects-list';
 import SectionBadge from '@/components/section-badge';
 import { projects } from '@/data/project.data';
+import { Suspense } from 'react';
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 5);
@@ -45,22 +49,26 @@ export default function Home() {
             </Motion>
           </div>
 
-          <Carousel showNavigation showPagination loop>
-            {featuredProjects.map((featured) => (
-              <FeaturedProject
-                key={featured.id}
-                title={featured.title}
-                category={featured.category}
-                description={featured.description}
-                features={featured.features}
-                technologies={featured.technologies}
-                image={featured.image ?? ''}
-                website={featured.website}
-              />
-            ))}
-          </Carousel>
+          <Suspense fallback={<FeaturedProjectSkeleton />}>
+            <Carousel showNavigation showPagination loop>
+              {featuredProjects.map((featured) => (
+                <FeaturedProject
+                  key={featured.id}
+                  title={featured.title}
+                  category={featured.category}
+                  description={featured.description}
+                  features={featured.features}
+                  technologies={featured.technologies}
+                  image={featured.image ?? ''}
+                  website={featured.website}
+                />
+              ))}
+            </Carousel>
+          </Suspense>
 
-          <ProjectsList projects={projects} />
+          <Suspense fallback={<ProjectListItemSkeleton />}>
+            <ProjectsList projects={projects} />
+          </Suspense>
         </div>
       </section>
     </>

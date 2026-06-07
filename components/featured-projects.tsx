@@ -5,6 +5,53 @@ import { Button } from './button';
 import Show from './show';
 import Motion from './motion';
 import { Project } from '@/types/project.type';
+import Skeleton from './skeleton';
+
+export const FeaturedProjectSkeleton = () => {
+  return (
+    <article className="relative overflow-hidden rounded-[40px] border border-primary/20 bg-primary/5">
+      <div className="grid gap-10 p-6 md:p-10 xl:grid-cols-2 xl:p-14">
+        <div>
+          <Skeleton className="h-3 w-32" />
+
+          <Skeleton className="mt-4 h-14 w-3/4" />
+
+          <div className="mt-6 flex flex-col gap-2">
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-5/6" />
+            <Skeleton className="h-4 w-4/6" />
+          </div>
+
+          <div className="mt-10">
+            <Skeleton className="mb-4 h-3 w-28" />
+            <div className="flex flex-wrap gap-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Skeleton key={i} className="h-9 w-28 rounded-full" />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <Skeleton className="mb-4 h-3 w-20" />
+            <div className="flex flex-wrap gap-3">
+              {Array.from({ length: 4 }).map((_, i) => (
+                <Skeleton key={i} className="h-9 w-24 rounded-full" />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Skeleton className="h-11 w-36 rounded-full" />
+            <Skeleton className="h-11 w-32 rounded-full" />
+          </div>
+        </div>
+
+        <Skeleton className="h-80 w-full rounded-2xl xl:h-full" />
+      </div>
+    </article>
+  );
+};
+
 const FeaturedProject = (project: Project) => {
   return (
     <article className="group relative overflow-hidden rounded-[40px] border border-primary/20 bg-primary/5">

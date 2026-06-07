@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import Motion from './motion';
-import ProjectListItem from './project-list-item';
+import ProjectListItem, { ProjectListItemSkeleton } from './project-list-item';
 import { Project } from '@/types/project.type';
 import { Button } from './button';
 import Show from './show';
@@ -11,6 +11,16 @@ const PAGE_SIZE = 5;
 
 type Props = {
   projects: Project[];
+};
+
+export const ProjectsListSkeleton = () => {
+  return (
+    <div className="mt-12">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <ProjectListItemSkeleton key={i} />
+      ))}
+    </div>
+  );
 };
 
 const ProjectsList = ({ projects }: Props) => {
