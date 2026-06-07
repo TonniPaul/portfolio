@@ -4,7 +4,7 @@ import SvgIcon from './svg-icon';
 import { cn } from '@/lib/utils';
 import { IconName } from '@/types/icon.type';
 
-export type Variant = 'primary' | 'primary-db' | 'black';
+export type Variant = 'primary' | 'primary-outline' | 'black';
 
 export type Size = 'default' | 'sm' | 'md' | 'lg' | 'icon';
 
@@ -18,8 +18,8 @@ export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export const variantStyles: Record<Variant, string> = {
   primary: 'bg-primary text-white border-white/50 hover:bg-primary/60',
-  'primary-db':
-    'bg-primary text-white border-black text-black hover:bg-primary/60',
+  'primary-outline':
+    'bg-white/5 text-white border-primary text-primary hover:bg-primary/10',
   black: 'bg-black text-white border-white hover:bg-black/80',
 };
 
