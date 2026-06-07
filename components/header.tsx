@@ -1,9 +1,8 @@
 'use client';
 
-// import { routes } from '@/lib/routes';
+import { routes } from '@/lib/routes';
 import SvgIcon from './svg-icon';
 import ThemeToggle from './theme-toggle';
-// import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -12,16 +11,12 @@ import Show from './show';
 import Modal from './modal';
 import RebuildNotice from './rebuild-notice';
 
-// const navItems = [
-//   {
-//     label: 'Blog',
-//     href: routes.blog(),
-//   },
-//   {
-//     label: 'Services',
-//     href: routes.blog(),
-//   },
-// ];
+const navItems = [
+  {
+    label: 'Projects',
+    href: routes.projects(),
+  },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,19 +45,21 @@ const Header = () => {
           <SvgIcon name="close" className="w-8 h-8" />
         </button>
       </li>
-      <Modal trigger={<button>Projects</button>} className="app-padding">
-        <RebuildNotice />
-      </Modal>
-      {/* {navItems.map((item) => (
+      {navItems.map((item) => (
         <li key={item.label} className="border-b">
-          <Link
+          <a
             href={item.href}
             className="text-app-text hover:text-app-black  py-3 px-6 block transition"
           >
             {item.label}
-          </Link>
+          </a>
         </li>
-      ))} */}
+      ))}
+      <li className="border-b">
+        <Modal trigger={<button>About</button>} className="app-padding">
+          <RebuildNotice />
+        </Modal>
+      </li>
     </ul>
   );
 
@@ -95,19 +92,21 @@ const Header = () => {
               </button>
             </li>
 
-            <Modal trigger={<button>Projects</button>} className="app-padding">
-              <RebuildNotice />
-            </Modal>
-            {/* {navItems.map((item) => (
+            {navItems.map((item) => (
               <li key={item.label} className="max-md:mb-4">
-                <Link
+                <a
                   href={item.href}
                   className="text-app-text hover:text-app-black transition"
                 >
                   {item.label}
-                </Link>
+                </a>
               </li>
-            ))} */}
+            ))}
+            <li className="max-md:mb-4">
+              <Modal trigger={<button>About</button>} className="app-padding">
+                <RebuildNotice />
+              </Modal>
+            </li>
           </ul>
         </div>
 
