@@ -12,4 +12,10 @@ export type IconName =
   | 'twitter'
   | 'chevron-down'
   | 'laptop-project'
-  | 'check-fill';
+  | 'check-fill'
+  | 'terminal'
+  | 'layers'
+  | 'code-xml'
+  | 'rocket'
+  | 'zap'
+  | 'external-link';
