@@ -1,4 +1,4 @@
-import ProjectBrowser from './project-browser';
+import Browser from './browser';
 import Link from 'next/link';
 import SvgIcon from './svg-icon';
 import { Button } from './button';
@@ -6,6 +6,7 @@ import Show from './show';
 import Motion from './motion';
 import { Project } from '@/types/project.type';
 import Skeleton from './skeleton';
+import Image from 'next/image';
 
 export const FeaturedProjectSkeleton = () => {
   return (
@@ -63,7 +64,7 @@ const FeaturedProject = (project: Project) => {
             Featured Project
           </span>
 
-          <h3 className="mt-4 text-a-34 font-black md:text-6xl">
+          <h3 className="mt-4 text-a-34 font-black md:text-4xl">
             {project.title}
           </h3>
 
@@ -78,10 +79,7 @@ const FeaturedProject = (project: Project) => {
 
             <div className="flex flex-wrap gap-3">
               {project.features?.map((feature, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm"
-                >
+                <span key={idx} className="pill flex gap-1 items-center">
                   <SvgIcon name="check-fill" className="h-5 w-5" />
                   {feature}
                 </span>
@@ -95,12 +93,9 @@ const FeaturedProject = (project: Project) => {
             </p>
 
             <div className="flex flex-wrap gap-3">
-              {project.technologies?.map((t, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-sm"
-                >
-                  {t}
+              {project.technologies?.map((p, idx) => (
+                <span key={idx} className="pill">
+                  {p}
                 </span>
               ))}
             </div>
@@ -129,25 +124,16 @@ const FeaturedProject = (project: Project) => {
           </div>
         </Motion>
 
-        <Motion
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-            rotate: -10,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            rotate: 0,
-          }}
-          transition={{
-            duration: 1,
-            ease: 'easeOut',
-          }}
-        >
-          {' '}
-          <ProjectBrowser image={project.image} />
-        </Motion>
+        <Browser>
+          <div className="relative aspect-16/10 rounded-b-4xl border">
+            <Image
+              fill
+              alt=""
+              src={project.image}
+              className="object-contain2q`"
+            />
+          </div>
+        </Browser>
       </div>
     </article>
   );
