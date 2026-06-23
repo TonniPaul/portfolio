@@ -1,3 +1,4 @@
+import AboutSection from '@/components/about';
 import Carousel from '@/components/carousel';
 import FeaturedProject, {
   FeaturedProjectSkeleton,
@@ -16,6 +17,8 @@ export default function Home() {
     <>
       <HeroSection />
 
+      <AboutSection />
+
       <section
         id="projects"
         className="app-padding app-padding-y relative app-break-bg isolate"
@@ -32,7 +35,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               className="max-w-5xl font-black leading-[0.95] tracking-tight text-3xl sm:text-4xl md:text-6xl"
             >
-              Products I've
+              Products I&apos;ve
               <br />
               <span className="text-primary">shipped into reality</span>.
             </Motion>
@@ -42,10 +45,10 @@ export default function Home() {
               delay={0.15}
               className="max-w-2xl text-base md:text-lg leading-relaxed text-foreground/65"
             >
-              A curated selection of products I've poured time and craft into
-              across healthcare, education, logistics, e-commerce, community,
-              and marketing. Each one built to solve a real problem for real
-              people.
+              A curated selection of products I&apos;ve poured time and craft
+              into across healthcare, education, logistics, e-commerce,
+              community, and marketing. Each one built to solve a real problem
+              for real people.
             </Motion>
           </div>
 
