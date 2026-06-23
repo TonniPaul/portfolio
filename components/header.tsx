@@ -8,15 +8,54 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import Show from './show';
-import Modal from './modal';
-import RebuildNotice from './rebuild-notice';
 
 const navItems = [
+  {
+    label: 'About Me',
+    href: routes.about(),
+  },
   {
     label: 'Projects',
     href: routes.projects(),
   },
 ];
+
+type MobileNavProps = {
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
+  return (
+    <ul
+      className={cn(
+        'fixed top-0 right-0 h-screen w-[80%] max-w-[320px] bg-background border-l border-primary z-90 py-6 md:hidden',
+        'transition-transform ease-in-out duration-300',
+        isOpen ? 'translate-x-0' : 'translate-x-full'
+      )}
+    >
+      <li className="md:hidden pb-10 block px-6 border-b">
+        <button
+          className="rounded-full text-white block w-max ml-auto"
+          onClick={() => setIsOpen(false)}
+        >
+          <SvgIcon name="close" className="w-8 h-8" />
+        </button>
+      </li>
+
+      {navItems.map((item) => (
+        <li
+          key={item.label}
+          className="border-b hover:underline ease-linear duration-200 transition-colors"
+        >
+          <a href={item.href} className="nav-item">
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,43 +68,9 @@ const Header = () => {
 
   const { resolvedTheme } = useTheme();
 
-  const MobileNav = () => (
-    <ul
-      className={cn(
-        'fixed top-0 right-0 h-screen w-[80%] max-w-[320px] bg-background border-l border-primary z-90 py-6 md:hidden',
-        'transition-transform ease-in-out duration-300',
-        isOpen ? 'translate-x-0' : 'translate-x-full'
-      )}
-    >
-      <li className="md:hidden pb-10 block px-6 border-b">
-        <button
-          className="rounded-full text-primary block w-max ml-auto"
-          onClick={() => setIsOpen(false)}
-        >
-          <SvgIcon name="close" className="w-8 h-8" />
-        </button>
-      </li>
-      {navItems.map((item) => (
-        <li key={item.label} className="border-b">
-          <a
-            href={item.href}
-            className="text-app-text hover:text-app-black  py-3 px-6 block transition"
-          >
-            {item.label}
-          </a>
-        </li>
-      ))}
-      <li className="border-b">
-        <Modal trigger={<button>About</button>} className="app-padding">
-          <RebuildNotice />
-        </Modal>
-      </li>
-    </ul>
-  );
-
   return (
     <header className="app-padding transition-transform fixed top-5 w-full left-0 z-50">
-      <MobileNav />
+      <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className={cn('blurred-bg hidden', isOpen && 'block md:hidden')} />
 
       <nav className="flex gap-4 items-center">
@@ -96,17 +101,12 @@ const Header = () => {
               <li key={item.label} className="max-md:mb-4">
                 <a
                   href={item.href}
-                  className="text-app-text hover:text-app-black transition"
+                  className="pb-0.5 hover:underline ease-linear duration-200 transition-colors"
                 >
                   {item.label}
                 </a>
               </li>
             ))}
-            <li className="max-md:mb-4">
-              <Modal trigger={<button>About</button>} className="app-padding">
-                <RebuildNotice />
-              </Modal>
-            </li>
           </ul>
         </div>
 

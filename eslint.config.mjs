@@ -1,28 +1,23 @@
-import { FlatCompat } from '@eslint/eslintrc';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-});
-
-export default defineConfig([
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
   {
     rules: {
-      'space-before-function-paren': 'off',
-      '@typescript-eslint/space-before-function-paren': 'off',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          vars: 'all',
-          args: 'after-used',
-          ignoreRestSiblings: false,
-        },
-      ],
-      'react/no-unescaped-entities': 'off',
-      '@next/next/no-document-import-in-page': 'off',
-      'react/display-name': 'off',
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
-  globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts']),
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+  ]),
 ]);
+
+export default eslintConfig;

@@ -50,6 +50,7 @@ const ProjectsList = ({ projects }: Props) => {
             description={project.description}
             technologies={project.technologies}
             website={project.website}
+            github={project.github}
           />
         </Motion>
       ))}
