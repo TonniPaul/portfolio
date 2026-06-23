@@ -18,4 +18,5 @@ export type IconName =
   | 'code-xml'
   | 'rocket'
   | 'zap'
-  | 'external-link';
+  | 'external-link'
+  | 'info';

@@ -12,8 +12,9 @@ const RebuildNotice = () => {
         </DialogTitle>
 
         <p className="mt-2 text-muted-foreground">
-          I'm crafting a new portfolio experience from the ground up—one that
-          better showcases my work, capabilities, and the way I solve problems.
+          I&apos;m crafting a new portfolio experience from the ground up—one
+          that better showcases my work, capabilities, and the way I solve
+          problems.
         </p>
 
         <p>
