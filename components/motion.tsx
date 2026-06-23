@@ -1,25 +1,25 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ElementType } from 'react';
+import { ComponentProps, ComponentPropsWithoutRef, ElementType } from 'react';
 
 type MotionProps<T extends keyof HTMLElementTagNameMap> = {
   as?: T;
   delay?: number;
-} & React.ComponentPropsWithoutRef<T> &
-  React.ComponentProps<typeof motion.div>;
+} & ComponentPropsWithoutRef<T> &
+  ComponentProps<typeof motion.div>;
 
 function Motion<T extends keyof HTMLElementTagNameMap = 'div'>({
-  as,
+  as = 'div' as T,
   children,
   delay = 0,
   initial = { opacity: 0, y: 40 },
   whileInView = { opacity: 1, y: 0 },
-  viewport = { once: true, amount: 0.4 },
+  viewport = { once: true, amount: 0.2 },
   transition,
   ...props
 }: MotionProps<T>) {
-  const Component = motion.create((as || 'div') as ElementType);
+  const Component = motion.create(as) as ElementType;
 
   return (
     <Component
