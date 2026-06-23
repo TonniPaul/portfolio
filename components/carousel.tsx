@@ -26,7 +26,7 @@ const Carousel = ({
   showPagination = false,
   spaceBetween = 16,
   slidesPerView = 1,
-  loop = true,
+  loop = false,
   className,
 }: SwiperCarouselProps) => {
   const id = useId();
@@ -64,7 +64,7 @@ const Carousel = ({
         <div className="flex justify-between items-center mt-6">
           <div className="carousel-pagination flex gap-1" />
 
-          <div className="flex w-max ml-auto gap-2 *:border *:rounded-5">
+          <div className="flex w-max ml-auto gap-2 *:border *:rounded-5 *:disabled:opacity-50">
             <button className="prev p-2">
               <SvgIcon name="chevron-down" className="rotate-90 w-6 h-6" />
             </button>
