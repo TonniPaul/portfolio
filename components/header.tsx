@@ -8,10 +8,12 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import Show from './show';
-import Modal from './modal';
-import RebuildNotice from './rebuild-notice';
 
 const navItems = [
+  {
+    label: 'About Me',
+    href: routes.about(),
+  },
   {
     label: 'Projects',
     href: routes.projects(),
@@ -42,21 +44,15 @@ const MobileNav = ({ isOpen, setIsOpen }: MobileNavProps) => {
       </li>
 
       {navItems.map((item) => (
-        <li key={item.label} className="border-b">
+        <li
+          key={item.label}
+          className="border-b hover:underline ease-linear duration-200 transition-colors"
+        >
           <a href={item.href} className="nav-item">
             {item.label}
           </a>
         </li>
       ))}
-
-      <li className="border-b">
-        <Modal
-          trigger={<button className="nav-item">About</button>}
-          className="app-padding"
-        >
-          <RebuildNotice />
-        </Modal>
-      </li>
     </ul>
   );
 };
@@ -105,17 +101,12 @@ const Header = () => {
               <li key={item.label} className="max-md:mb-4">
                 <a
                   href={item.href}
-                  className="text-app-text hover:text-app-black transition"
+                  className="pb-0.5 hover:underline ease-linear duration-200 transition-colors"
                 >
                   {item.label}
                 </a>
               </li>
             ))}
-            <li className="max-md:mb-4">
-              <Modal trigger={<button>About</button>} className="app-padding">
-                <RebuildNotice />
-              </Modal>
-            </li>
           </ul>
         </div>
 

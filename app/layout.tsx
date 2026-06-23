@@ -7,6 +7,7 @@ import SplashCursor from '@/components/animations/splash-cursor';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import './globals.css';
+import FloatingNotice from '@/components/floating-rebuild-notice';
 
 const font = JetBrains_Mono({ subsets: ['latin'] });
 
@@ -57,6 +58,8 @@ export default function RootLayout({
         </ThemeProvider>
 
         <GoogleTagManager gtmId="G-NJQP8WLF5F" />
+
+        <FloatingNotice />
       </body>
     </html>
   );
