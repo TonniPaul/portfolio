@@ -51,7 +51,7 @@ const HeroSection = () => {
             transition={{
               duration: 0.8,
             }}
-            className="text-3xl font-bold leading-normal md:leading-tight xs:text-4xl md:text-7xl xl:text-[110px]"
+            className="text-3xl font-bold leading-normal md:leading-tight xs:text-4xl md:text-7xl"
           >
             Coding_
             <br />

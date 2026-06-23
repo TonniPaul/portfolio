@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import SvgIcon from './svg-icon';
 import Skeleton from './skeleton';
+import Show from './show';
+import Motion from './motion';
 
 type Props = {
   id: number;
@@ -11,6 +13,7 @@ type Props = {
   website: string;
   metrics?: undefined;
   image?: undefined;
+  github?: string;
 };
 
 export const ProjectListItemSkeleton = () => {
@@ -63,12 +66,21 @@ const ProjectListItem = (project: Props) => {
         </div>
       </div>
 
-      <Link href={project.website} target="_blank" rel="no ">
-        <SvgIcon
-          name="arrow-right-up"
-          className="text-primary transition-transform duration-300 group-hover:-translate-y-1 group-hover:-translate-x-1 w-10 h-10"
-        />
-      </Link>
+      <Motion className="flex h-fit gap-3  ml-auto items-center *:aspect-square *:grid *:place-content-center  *:group *:w-fit *:h-fit *:p-3 *:border-2 *:rounded-full">
+        <Link href={project.website} target="_blank" rel="noopener noreferrer">
+          <SvgIcon name="external-link" className="w-5 h-5" />
+        </Link>
+
+        <Show when={!!project.github}>
+          <Link
+            href={project.github || '#'}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SvgIcon name="github" className="w-5 h-5" />
+          </Link>
+        </Show>
+      </Motion>
     </article>
   );
 };
