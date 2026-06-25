@@ -3,7 +3,7 @@
 import Lanyard from './lanyard';
 import SvgIcon from './svg-icon';
 import Motion from './motion';
-import { socials } from '@/utils/constants';
+import { NAME, ROLE, socials } from '@/utils/constants';
 import { Button } from './button';
 import SectionBadge from './section-badge';
 
@@ -141,9 +141,9 @@ const HeroSection = () => {
             <Lanyard
               imageSrc="/assets/head-shot.jpg"
               qrCodeSrc="/assets/qr-code.png"
-              name="Paul Oluwatoni Ariyo-Adeoye"
+              name={NAME}
               skills={skills}
-              role="Software Engineer"
+              role={ROLE}
             />
           </div>
         </Motion>

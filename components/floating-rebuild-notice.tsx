@@ -22,10 +22,6 @@ const FloatingNotice = () => {
           'relative flex items-start gap-3 max-w-md rounded-2xl border border-primary/30 bg-background/80 backdrop-blur-md shadow-a-base p-4 animate-[content-bounce_500ms_ease-out]'
         )}
       >
-        <div className="absolute inset-0 rounded-2xl ring-1 ring-primary/30 animate-pulse pointer-events-none" />
-
-        <div className="absolute inset-0 -translate-x-full animate-shimmer bg-linear-to-r from-transparent via-primary/10 to-transparent pointer-events-none" />
-
         <div className="relative mt-1 h-8 w-8 aspect-square grid place-items-center rounded-full bg-primary/15 text-primary animate-pulse">
           <SvgIcon name="info" className="h-4 w-4" />
         </div>

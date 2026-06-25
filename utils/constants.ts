@@ -22,3 +22,6 @@ export const socials: { label: string; href: string; icon: IconName }[] = [
     icon: 'instagram',
   },
 ];
+
+export const NAME = 'Paul Oluwatoni Ariyo-Adeoye';
+export const ROLE = 'Software Engineer';
