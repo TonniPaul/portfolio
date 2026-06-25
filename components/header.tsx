@@ -18,6 +18,10 @@ const navItems = [
     label: 'Projects',
     href: routes.projects(),
   },
+  {
+    label: 'Contact',
+    href: routes.contact(),
+  },
 ];
 
 type MobileNavProps = {
