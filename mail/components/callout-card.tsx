@@ -8,7 +8,7 @@ type Props = {
 
 export const CalloutCard = ({ title, children }: Props) => {
   return (
-    <Section className="my-7 rounded-lg border border-primary/15 border-l-[5px] border-l-primary p-5">
+    <Section className="my-5 rounded-lg border border-primary/15 border-l-[5px] border-l-primary p-5">
       <Text className="m-0 text-[13px] font-bold uppercase tracking-[1px] text-primary">
         {title}
       </Text>

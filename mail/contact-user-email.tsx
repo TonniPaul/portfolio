@@ -19,31 +19,30 @@ export default function ContactUserEmail({ name }: Props) {
       </Heading>
 
       <Text className="mb-4">
-        Thank you for reaching out through my portfolio. Your message has
-        successfully landed in my inbox and I appreciate you taking the time to
-        connect.
+        Thanks for getting in touch! Your message has been successfully received
+        and is now in my inbox.
       </Text>
 
       <Text className="mb-4">
-        I&apos;ll personally review your message and get back to you as soon as
-        possible.
+        I&apos;ll personally review it and get back to you within 24 hours.
       </Text>
 
       <CalloutCard title="What happens next?">
-        Whether you&apos;re looking to hire a frontend developer, discuss a
-        project, explore a collaboration, or simply connect, I&apos;ll review
-        your message and respond with the next steps.
+        Whether you’re looking to hire a frontend developer, discuss a project,
+        explore a collaboration, or simply say hello, I’ll review your message
+        and follow up with the next steps.
       </CalloutCard>
 
       <Text className="mb-4">
-        In the meantime, feel free to browse more of my{' '}
+        In the meantime, feel free to explore more of my{' '}
         <Link
           href="https://tonnipaul.com"
           className="font-semibold text-primary underline"
         >
           work
-        </Link>{' '}
-        and connect with me through any of my social platforms.
+        </Link>
+        . You can also connect with me on any of my social platforms using the
+        links in the footer below.
       </Text>
 
       <Text className="mt-9 mb-0 text-[15px]  text-gray-600">

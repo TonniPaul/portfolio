@@ -21,9 +21,10 @@ export const EmailHeader = () => {
           className="mx-auto mb-3 block h-auto max-w-full"
         />
 
-        <Text className="text-[13px] font-bold">{NAME}</Text>
-
-        <Text className="m-0 text-[11px] font-bold">{ROLE}</Text>
+        <div className="space-y-1">
+          <Text className="text-[17px] font-bold m-0">{NAME}</Text>
+          <Text className="m-0 text-[13px] font-bold ">{ROLE}</Text>
+        </div>
       </Section>
 
       <Section

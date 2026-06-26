@@ -20,12 +20,12 @@ export default function ContactAdminEmail({
   message,
 }: Props) {
   return (
-    <EmailLayout preview={`New contact form submission from ${name} 🚀`}>
-      <EmailBadge>New Lead</EmailBadge>
+    <EmailLayout preview={`New message from ${name} 🚀`}>
+      <EmailBadge>New Contact Request</EmailBadge>
 
       <Text className="mb-7">
-        Someone just submitted the contact form on your portfolio website. Here
-        are the details:
+        Great news! Someone has just reached out through your website. Here are
+        the details of the enquiry:
       </Text>
 
       <InfoCard label="Full Name" value={name} />
@@ -33,16 +33,16 @@ export default function ContactAdminEmail({
       <InfoCard label="Email Address" value={email} />
 
       <Show when={!!phone}>
-        <InfoCard label="Phone Number" value={phone || 'Not Provided'} />
+        <InfoCard label="Phone Number" value={phone || 'Not provided'} />
       </Show>
 
       <CalloutCard title="Message">{message}</CalloutCard>
 
       <Section className="mt-6 rounded-md border border-primary/10 bg-[#faf7fd] p-4.5">
         <Text className="m-0 text-[13px] leading-6 text-gray-500">
-          💡 You can reply directly to{' '}
+          💡 <strong>Quick action:</strong> Reach out to{' '}
           <strong className="text-primary">{email}</strong> to continue the
-          conversation.
+          conversation with {name}.
         </Text>
       </Section>
     </EmailLayout>

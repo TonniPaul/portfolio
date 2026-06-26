@@ -15,7 +15,15 @@ import { AnimatePresence } from 'framer-motion';
 import Motion from './motion';
 import SvgIcon from './svg-icon';
 
-const initialState: InitialContactFormState = {};
+const initialState: InitialContactFormState = {
+  values: {
+    name: 'TonniPaul',
+    email: 'ariyoadeoyepaul@gmail.com',
+    phone: '+2348162325194',
+    message:
+      'Hi TonniPaul, I would like to discuss a frontend development project and get your availability.',
+  },
+};
 
 const ContactForm = () => {
   const [state, action, isPending] = useActionState(sendMessage, initialState);
@@ -126,8 +134,7 @@ const ContactForm = () => {
       <Button
         type="submit"
         loading={isPending}
-        disabled={isPending}
-        className="mx-auto"
+        className="mx-auto min-w-43"
         withIcon
         icon="send"
       >

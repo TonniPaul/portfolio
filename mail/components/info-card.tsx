@@ -8,36 +8,16 @@ type Props = {
 export const InfoCard = ({ label, value }: Props) => {
   return (
     <Section
+      className="mb-3.5 rounded-2xl border border-primary/15 p-4.5"
       style={{
         background: 'linear-gradient(180deg, #faf7fd 0%, #ffffff 100%)',
-        border: '1px solid rgba(125, 68, 168, 0.15)',
-        borderRadius: '16px',
-        padding: '18px',
-        marginBottom: '14px',
       }}
     >
-      <Text
-        style={{
-          margin: 0,
-          color: '#7d44a8',
-          fontSize: '11px',
-          fontWeight: '700',
-          textTransform: 'uppercase',
-          letterSpacing: '1px',
-        }}
-      >
+      <Text className="m-0 text-[11px] font-bold uppercase tracking-[1px] text-primary">
         {label}
       </Text>
 
-      <Text
-        style={{
-          margin: '8px 0 0',
-          color: '#171717',
-          fontSize: '16px',
-          lineHeight: '24px',
-          fontWeight: '500',
-        }}
-      >
+      <Text className="mt-2 mb-0 text-[13px] font-medium text-[#171717]">
         {value}
       </Text>
     </Section>
