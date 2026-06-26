@@ -42,7 +42,10 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex w-full from-background flex-col items-center justify-between gap-20 app-padding-b pt-32 lg:flex-row">
         <div className="">
-          <SectionBadge text="CUSTOM SOFTWARE SOLUTIONS_" />
+          <SectionBadge
+            text="CUSTOM SOFTWARE SOLUTIONS_"
+            className="md:text-lg mb-5"
+          />
 
           <Motion
             as={'h1'}
@@ -54,19 +57,14 @@ const HeroSection = () => {
             className="text-3xl font-bold leading-normal md:leading-tight xs:text-4xl md:text-7xl"
           >
             Coding_
-            <br />
-            <span className="relative inline-block text-primary">
+            <span className="relative block text-primary w-fit">
               A Better_
-              <span className="absolute -bottom-3 left-0 h-3 w-full bg-primary/30 blur-xl" />
+              <span className="absolute -bottom-3 left-0 h-3 w-full bg-primary/50 blur-xl" />
             </span>
-            <br />
             World_
           </Motion>
 
-          <Motion
-            as={'p'}
-            className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground/70 md:text-xl"
-          >
+          <Motion as={'p'} className="mt-8 max-w-2xl md:text-lg">
             Through thoughtful design and clean code, I create digital products
             that make everyday experiences simpler, faster, and more meaningful
             for the people who use them.

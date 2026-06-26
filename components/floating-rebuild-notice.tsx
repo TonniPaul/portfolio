@@ -27,19 +27,19 @@ const FloatingNotice = () => {
         </div>
 
         <div className="relative flex-1">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center flex-wrap gap-2 mb-2">
             <p className="text-sm font-semibold text-foreground">
               Portfolio Status
             </p>
 
-            <span className="text-a-10 font-bold px-2 py-0.5 rounded-full bg-primary text-white animate-pulse">
-              WIP / BETA
+            <span className="text-a-10 font-bold px-2 py-0.5 rounded-full bg-primary text-white animate-pulse uppercase">
+              development
             </span>
           </div>
 
           <p className="text-xs text-foreground/70 leading-snug mt-1">
-            This frontend portfolio is actively under development. New features,
-            UI improvements, and sections are being shipped continuously.
+            This portfolio is actively under development. New features, UI
+            improvements, and sections are being shipped continuously.
           </p>
         </div>
 
