@@ -46,9 +46,9 @@ export default function ContactUserEmail({ name }: Props) {
         and connect with me through any of my social platforms.
       </Text>
 
-      <Text className="mt-9 mb-0 text-[11px]  text-gray-600">
+      <Text className="mt-9 mb-0 text-[15px]  text-gray-600">
         Best regards,
-        <strong className="text-primary-900">{NAME}</strong>
+        <strong className="text-primary-900 block">{NAME}</strong>
         {ROLE}
       </Text>
     </EmailLayout>
