@@ -15,15 +15,7 @@ import { AnimatePresence } from 'framer-motion';
 import Motion from './motion';
 import SvgIcon from './svg-icon';
 
-const initialState: InitialContactFormState = {
-  values: {
-    name: 'TonniPaul',
-    email: 'ariyoadeoyepaul@gmail.com',
-    phone: '+2348162325194',
-    message:
-      'Hi TonniPaul, I would like to discuss a frontend development project and get your availability.',
-  },
-};
+const initialState: InitialContactFormState = {};
 
 const ContactForm = () => {
   const [state, action, isPending] = useActionState(sendMessage, initialState);
