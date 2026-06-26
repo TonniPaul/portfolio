@@ -8,7 +8,7 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative overflow-hidden app-padding app-padding-y"
+      className="relative overflow-hidden app-padding app-padding-y app-break-bg"
     >
       <div className="absolute top-20 left-1/2 h-a-500 w-a-500 -translate-x-1/2 rounded-full bg-primary/10 blur-[150px]" />
 
@@ -24,16 +24,11 @@ const AboutSection = () => {
 
           <Motion as="h2" className="section-head-text">
             I don&rsquo;t just build
-            <br />
-            <span className="text-primary">websites.</span>
-            <br />I engineer experiences.
+            <span className="text-primary block">websites.</span>I engineer
+            experiences.
           </Motion>
 
-          <Motion
-            as="p"
-            delay={0.2}
-            className="max-w-3xl text-lg leading-relaxed text-foreground/70 md:text-xl"
-          >
+          <Motion as="p" delay={0.2} className="max-w-3xl mt-4 md:text-lg">
             Frontend development isn&apos;t about pushing pixels. It&apos;s
             about turning ideas into experiences people genuinely enjoy using.
           </Motion>
@@ -44,19 +39,13 @@ const AboutSection = () => {
             <div className="section-card backdrop-blur-sm md:p-10">
               <SvgIcon name="sparkles" className="mb-6  w-8 h-8 text-primary" />
 
-              <Motion
-                as="p"
-                className="mb-6 text-lg leading-relaxed text-foreground/80"
-              >
+              <Motion as="p" className="mt-4 md:text-lg">
                 I specialize in building fast, scalable, visually striking web
                 applications using modern technologies like React, Next.js,
                 TypeScript, and Tailwind CSS.
               </Motion>
 
-              <Motion
-                as="p"
-                className="text-lg leading-relaxed text-foreground/80"
-              >
+              <Motion as="p" className="mt-4 md:text-lg">
                 Whether it&apos;s a startup MVP, enterprise dashboard,
                 healthcare platform, or high-converting landing page, my mission
                 remains the same:
@@ -66,7 +55,7 @@ const AboutSection = () => {
                 delay={0.3}
                 className="mt-8 border-l-4 border-primary pl-6"
               >
-                <p className="text-2xl font-bold md:text-4xl">
+                <p className="text-xl font-bold md:text-2xl">
                   Create interfaces that feel effortless.
                 </p>
               </Motion>
@@ -83,7 +72,7 @@ const AboutSection = () => {
                     {item.value}
                   </h3>
 
-                  <p className="text-foreground/60">{item.label}</p>
+                  <p className="md:text-lg">{item.label}</p>
                 </Motion>
               ))}
             </div>
@@ -91,21 +80,15 @@ const AboutSection = () => {
             <div className="section-card">
               <SvgIcon name="zap" className="mb-6 text-primary w-7.5 h-7.5" />
 
-              <Motion as="h3" className="mb-4 text-3xl font-bold">
+              <Motion as="h3" className="mb-4 card-head-text">
                 My Philosophy
               </Motion>
 
-              <Motion
-                as="p"
-                className="text-lg leading-relaxed text-foreground/70"
-              >
+              <Motion as="p" className="mt-4 md:text-lg">
                 Users should never have to think about the interface.
               </Motion>
 
-              <Motion
-                as="p"
-                className="mt-4 text-lg leading-relaxed text-foreground/70"
-              >
+              <Motion as="p" className="mt-4 md:text-lg">
                 When a product is built correctly, navigation feels obvious,
                 performance feels instant, and every interaction feels natural.
               </Motion>
@@ -115,21 +98,21 @@ const AboutSection = () => {
           <div className="space-y-6 lg:col-span-5">
             <ProjectBrowser>
               <div className="space-y-3 p-8 text-primary-200">
-                <p className="text-primary">$ whoami</p>
+                <p className="text-primary-700">$ whoami</p>
                 <p>Paul Ariyo-Adeoye</p>
                 <p>Frontend Engineer</p>
                 <p>UI Craftsman </p>
                 <p>Performance Enthusiast </p>
                 <p>Problem Solver</p>
 
-                <span className="pill text-primary mt-4">
+                <span className="pill text-primary-700 mt-4">
                   Available for projects
                 </span>
               </div>
             </ProjectBrowser>
 
             <div className="section-card p-8">
-              <Motion as="h3" className="mb-8 text-3xl font-bold">
+              <Motion as="h3" className="mb-8 card-head-text">
                 What I Do
               </Motion>
 
@@ -164,9 +147,9 @@ const AboutSection = () => {
             </div>
 
             <div className="section-card p-8">
-              <h3 className="mb-6 text-3xl font-bold">Tech Stack</h3>
+              <h3 className="mb-6 card-head-text">Tech Stack</h3>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 {skills.map((skill, idx) => (
                   <Motion
                     as="span"
@@ -251,12 +234,18 @@ const stats = [
 const skills = [
   'Next.js',
   'React',
+  'javascript',
   'TypeScript',
   'Tailwind CSS',
+  'Styled Components',
+  'HTML',
   'Framer Motion',
   'Node.js',
-  'PostgreSQL',
+  'Svelte',
   'GitLab CI/CD',
   'Sanity CMS',
   'REST APIs',
+  'Wordpress',
+  'Zustand',
+  'Css Modules',
 ];

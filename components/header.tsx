@@ -1,6 +1,5 @@
 'use client';
 
-import { routes } from '@/lib/routes';
 import SvgIcon from './svg-icon';
 import ThemeToggle from './theme-toggle';
 import { cn } from '@/lib/utils';
@@ -8,17 +7,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import Show from './show';
-
-const navItems = [
-  {
-    label: 'About Me',
-    href: routes.about(),
-  },
-  {
-    label: 'Projects',
-    href: routes.projects(),
-  },
-];
+import { navItems } from '@/data/nav-items';
 
 type MobileNavProps = {
   isOpen: boolean;

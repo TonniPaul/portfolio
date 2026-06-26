@@ -1,5 +1,6 @@
 import AboutSection from '@/components/about';
 import Carousel from '@/components/carousel';
+import ContactSection from '@/components/contact';
 import FeaturedProject, {
   FeaturedProjectSkeleton,
 } from '@/components/featured-projects';
@@ -21,7 +22,7 @@ export default function Home() {
 
       <section
         id="projects"
-        className="app-padding app-padding-y relative app-break-bg isolate"
+        className="app-padding app-padding-y relative isolate"
       >
         <div className="absolute left-1/2 top-40 aspect-square w-full max-w-150 -translate-x-1/2 rounded-full bg-primary/30 blur-[180px]" />
 
@@ -33,11 +34,10 @@ export default function Home() {
               as="h2"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="max-w-5xl font-black leading-[0.95] tracking-tight text-3xl sm:text-4xl md:text-6xl"
+              className="section-head-text"
             >
               Products I&apos;ve
-              <br />
-              <span className="text-primary">shipped into reality</span>.
+              <span className="text-primary block">shipped into reality</span>.
             </Motion>
 
             <Motion
@@ -74,6 +74,8 @@ export default function Home() {
           </Suspense>
         </div>
       </section>
+
+      <ContactSection />
     </>
   );
 }

@@ -22,28 +22,24 @@ const FloatingNotice = () => {
           'relative flex items-start gap-3 max-w-md rounded-2xl border border-primary/30 bg-background/80 backdrop-blur-md shadow-a-base p-4 animate-[content-bounce_500ms_ease-out]'
         )}
       >
-        <div className="absolute inset-0 rounded-2xl ring-1 ring-primary/30 animate-pulse pointer-events-none" />
-
-        <div className="absolute inset-0 -translate-x-full animate-shimmer bg-linear-to-r from-transparent via-primary/10 to-transparent pointer-events-none" />
-
         <div className="relative mt-1 h-8 w-8 aspect-square grid place-items-center rounded-full bg-primary/15 text-primary animate-pulse">
           <SvgIcon name="info" className="h-4 w-4" />
         </div>
 
         <div className="relative flex-1">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center flex-wrap gap-2 mb-2">
             <p className="text-sm font-semibold text-foreground">
               Portfolio Status
             </p>
 
-            <span className="text-a-10 font-bold px-2 py-0.5 rounded-full bg-primary text-white animate-pulse">
-              WIP / BETA
+            <span className="text-a-10 font-bold px-2 py-0.5 rounded-full bg-primary text-white animate-pulse uppercase">
+              development
             </span>
           </div>
 
           <p className="text-xs text-foreground/70 leading-snug mt-1">
-            This frontend portfolio is actively under development. New features,
-            UI improvements, and sections are being shipped continuously.
+            This portfolio is actively under development. New features, UI
+            improvements, and sections are being shipped continuously.
           </p>
         </div>
 

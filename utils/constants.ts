@@ -2,14 +2,14 @@ import { IconName } from '@/types/icon.type';
 
 export const socials: { label: string; href: string; icon: IconName }[] = [
   {
-    label: 'GitHub',
-    href: 'https://github.com/tonnipaul',
-    icon: 'github',
-  },
-  {
     label: 'LinkedIn',
     href: 'https://linkedin.com/in/tonnipaul',
     icon: 'linkedin',
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/tonnipaul',
+    icon: 'github',
   },
   {
     label: 'Twitter',
@@ -21,4 +21,13 @@ export const socials: { label: string; href: string; icon: IconName }[] = [
     href: 'https://instagram.com/tonnipaul',
     icon: 'instagram',
   },
+  {
+    label: 'Mail',
+    href: 'mailto:paul@tonnipaul.com',
+    icon: 'mail',
+  },
 ];
+
+export const NAME = 'Paul Oluwatoni Ariyo-Adeoye';
+export const NICKNAME = 'TonniPaul';
+export const ROLE = 'Software Engineer';

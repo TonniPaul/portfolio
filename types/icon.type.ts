@@ -19,4 +19,7 @@ export type IconName =
   | 'rocket'
   | 'zap'
   | 'external-link'
-  | 'info';
+  | 'info'
+  | 'mail'
+  | 'send'
+  | 'success';
