@@ -20,4 +20,6 @@ export type IconName =
   | 'zap'
   | 'external-link'
   | 'info'
-  | 'mail';
+  | 'mail'
+  | 'send'
+  | 'success';
