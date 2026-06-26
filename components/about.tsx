@@ -24,8 +24,8 @@ const AboutSection = () => {
 
           <Motion as="h2" className="section-head-text">
             I don&rsquo;t just build
-            <span className="text-primary block">websites.</span>I engineer
-            experiences.
+            <span className="text-primary block">web sites/apps,</span>I
+            engineer experiences.
           </Motion>
 
           <Motion as="p" delay={0.2} className="max-w-3xl mt-4 md:text-lg">

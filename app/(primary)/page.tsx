@@ -36,8 +36,8 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               className="section-head-text"
             >
-              Products I&apos;ve
-              <span className="text-primary block">shipped into reality</span>.
+              <span className="block">Products I&apos;ve</span>
+              <span className="text-primary">shipped into reality</span>.
             </Motion>
 
             <Motion
