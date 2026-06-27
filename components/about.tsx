@@ -18,17 +18,17 @@ const AboutSection = () => {
         </span>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative mx-auto max-w-7xl">
         <div className="mb-20 max-w-4xl flex flex-col gap-6">
           <SectionBadge text="About Me" icon="laptop-project" />
 
-          <Motion as="h2" className="section-head-text">
+          <Motion as="h2" delay={0.01} className="section-head-text">
             I don&rsquo;t just build
             <span className="text-primary block">web sites/apps,</span>I
             engineer experiences.
           </Motion>
 
-          <Motion as="p" delay={0.2} className="max-w-3xl mt-4 md:text-lg">
+          <Motion as="p" delay={0.05} className="max-w-3xl mt-4 md:text-lg">
             Frontend development isn&apos;t about pushing pixels. It&apos;s
             about turning ideas into experiences people genuinely enjoy using.
           </Motion>
@@ -52,7 +52,7 @@ const AboutSection = () => {
               </Motion>
 
               <Motion
-                delay={0.3}
+                delay={0.07}
                 className="mt-8 border-l-4 border-primary pl-6"
               >
                 <p className="text-xl font-bold md:text-2xl">
@@ -65,7 +65,7 @@ const AboutSection = () => {
               {stats.map((item, idx) => (
                 <Motion
                   key={item.label}
-                  delay={idx * 0.2}
+                  delay={idx * 0.01}
                   className="group section-card rounded-3xl"
                 >
                   <h3 className="mb-2 text-4xl font-black text-primary">
@@ -134,7 +134,7 @@ const AboutSection = () => {
                       duration: 0.6,
                       ease: 'easeOut',
                     }}
-                    delay={idx * 0.12}
+                    delay={idx * 0.01}
                   >
                     <SvgIcon name={icon} className="text-primary h-5 w-5" />
                     <div>
@@ -167,7 +167,7 @@ const AboutSection = () => {
                       duration: 1,
                       ease: 'easeOut',
                     }}
-                    delay={idx * 0.1}
+                    delay={idx * 0.02}
                     key={skill}
                     className="pill"
                   >

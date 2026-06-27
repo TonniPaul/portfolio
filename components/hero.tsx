@@ -40,7 +40,7 @@ const HeroSection = () => {
         <div className="h-24 w-24 rounded-full border border-primary/30 bg-primary/10 backdrop-blur-xl" />
       </Motion>
 
-      <div className="relative z-10 flex w-full from-background flex-col items-center justify-between gap-20 app-padding-b pt-32 lg:flex-row">
+      <div className="relative flex w-full from-background flex-col items-center justify-between gap-20 pt-32 lg:flex-row">
         <div className="">
           <SectionBadge
             text="CUSTOM SOFTWARE SOLUTIONS_"
@@ -85,7 +85,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
-              delay: 1.5,
+              delay: 0.05,
             }}
             className="mt-12 flex items-center gap-4"
           >

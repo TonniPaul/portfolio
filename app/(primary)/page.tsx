@@ -26,25 +26,16 @@ export default function Home() {
       >
         <div className="absolute left-1/2 top-40 aspect-square w-full max-w-150 -translate-x-1/2 rounded-full bg-primary/30 blur-[180px]" />
 
-        <div className="relative z-10">
+        <div className="relative">
           <div className="mb-16 flex flex-col gap-6">
             <SectionBadge text="Selected Work" icon="laptop-project" />
 
-            <Motion
-              as="h2"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="section-head-text"
-            >
+            <Motion as="h2" className="section-head-text">
               <span className="block">Products I&apos;ve</span>
               <span className="text-primary">shipped into reality</span>.
             </Motion>
 
-            <Motion
-              as="p"
-              delay={0.15}
-              className="max-w-2xl text-base md:text-lg leading-relaxed text-foreground/65"
-            >
+            <Motion as="p" delay={0.05} className="max-w-2xl">
               A curated selection of products I&apos;ve poured time and craft
               into across healthcare, education, logistics, e-commerce,
               community, and marketing. Each one built to solve a real problem
