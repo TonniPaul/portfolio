@@ -42,7 +42,7 @@ const ProjectsList = ({ projects }: Props) => {
   return (
     <div className="mt-12">
       {visibleProjects.map((project, idx) => (
-        <Motion key={idx} delay={idx * 0.1}>
+        <Motion key={idx} delay={idx * 0.03}>
           <ProjectListItem
             id={idx + 1}
             title={project.title}

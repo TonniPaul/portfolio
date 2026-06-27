@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 
-import { NAME, NICKNAME } from '@/utils/constants';
+import { NICKNAME } from '@/utils/constants';
 import { navItems } from '@/data/nav-items';
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="section-card">
           <div className="flex flex-col items-center justify-between gap-8 text-center lmd:flex-row lmd:text-left">
             <div>
-              <h3 className="font-black">{NAME}</h3>
+              <h3 className="font-black text-a-18 md:text-a-20">{NICKNAME}</h3>
 
               <p className="mt-2 max-w-md text-sm text-foreground/70">
                 Building modern, performant and delightful web experiences with
@@ -34,7 +34,7 @@ const Footer = () => {
 
           <div className="my-8 h-px bg-linear-to-r from-transparent via-primary/20 to-transparent" />
 
-          <div className="flex flex-col items-center justify-between gap-4 text-center text-sm text-foreground/60 lmd:flex-row">
+          <div className="flex flex-col items-center justify-between gap-4 text-center text-a-10 md:text-a-12 text-foreground/60 lmd:flex-row">
             <p>
               &copy; {new Date().getFullYear()} {NICKNAME} inc. All rights
               reserved.

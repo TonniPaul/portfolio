@@ -73,11 +73,16 @@
     @apply scroll-smooth scroll-p-16;
   }
   body {
-    @apply bg-background text-foreground/70 border-4 text-a-10 md:text-a-14;
+    @apply bg-background text-foreground/70 border-4 text-a-12 xs:text-base md:text-lg;
   }
 
   button {
     @apply cursor-pointer disabled:cursor-not-allowed;
+  }
+
+  input,
+  textarea {
+    @apply text-a-16;
   }
 }
 
@@ -123,7 +128,7 @@
 }
 
 @utility section-card {
-  @apply rounded-4xl border border-primary/15 bg-linear-to-br from-primary/10 via-transparent to-primary/5 p-8;
+  @apply rounded-4xl border border-primary/15 bg-linear-to-br from-primary/10 via-transparent to-primary/5 py-8 px-4 md:px-8;
 }
 
 @utility section-head-text {
@@ -143,7 +148,7 @@
 }
 
 @utility app-input {
-  @apply w-full rounded-xl border border-primary/20 bg-background/40 px-4 pt-6 pb-2 outline-none transition focus:border-primary;
+  @apply w-full rounded-xl border border-primary/20 bg-background px-4 pt-6 pb-2 outline-none transition focus:border-primary;
 }
 
 @keyframes content-show {

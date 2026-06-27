@@ -59,7 +59,7 @@ const FeaturedProject = (project: Project) => {
       <div className="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-primary/20 blur-[150px] transition-all duration-700 group-hover:scale-125" />
 
       <div className="grid gap-10 p-6 md:p-10 xl:grid-cols-2 xl:p-14">
-        <Motion>
+        <div>
           <span className="text-a-12 uppercase tracking-[0.3em] text-primary">
             Featured Project
           </span>
@@ -101,7 +101,7 @@ const FeaturedProject = (project: Project) => {
             </div>
           </div>
 
-          <div className=" mt-10 flex flex-wrap gap-4">
+          <div className=" mt-10 flex flex-wrap gap-4 max-xl:hidden">
             <Link href={project.website}>
               <Button withIcon tabIndex={-1}>
                 View Project
@@ -122,18 +122,42 @@ const FeaturedProject = (project: Project) => {
               </Link>
             </Show>
           </div>
-        </Motion>
+        </div>
 
-        <Browser>
-          <div className="relative aspect-16/10 rounded-b-4xl border">
-            <Image
-              fill
-              alt=""
-              src={project.image}
-              className="object-contain2q`"
-            />
+        <div>
+          <Browser>
+            <div className="relative aspect-16/10 rounded-b-4xl border">
+              <Image
+                fill
+                alt=""
+                src={project.image}
+                className="object-contain2q`"
+              />
+            </div>
+          </Browser>
+
+          <div className=" mt-10 flex flex-wrap gap-4 xl:hidden">
+            <Link href={project.website}>
+              <Button withIcon tabIndex={-1}>
+                View Project
+              </Button>
+            </Link>
+
+            <Show when={!!project.github}>
+              <Link href={project.github || '#'}>
+                <Button
+                  withIcon
+                  icon="github"
+                  variant="primary-outline"
+                  tabIndex={-1}
+                >
+                  {' '}
+                  Github
+                </Button>
+              </Link>
+            </Show>
           </div>
-        </Browser>
+        </div>
       </div>
     </article>
   );

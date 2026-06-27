@@ -18,7 +18,7 @@ const ContactSection = () => {
             <span className="text-primary scale-110">big idea.</span>
           </Motion>
 
-          <Motion as="p" delay={0.2} className="max-w-lg">
+          <Motion as="p" delay={0.05} className="max-w-lg">
             Have a project, an exciting opportunity, or just want to connect?
             I&apos;m always happy to chat about web development, product ideas,
             and how we can create something people genuinely enjoy using.
@@ -26,7 +26,7 @@ const ContactSection = () => {
 
           <Motion
             transition={{
-              delay: 0.5,
+              delay: 0.09,
             }}
             className="flex items-center gap-4"
           >
