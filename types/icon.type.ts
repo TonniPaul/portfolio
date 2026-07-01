@@ -22,4 +22,5 @@ export type IconName =
   | 'info'
   | 'mail'
   | 'send'
-  | 'success';
+  | 'success'
+  | 'quote-left';
