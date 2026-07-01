@@ -4,7 +4,7 @@ export const reviews = [
     lastName: 'Ogunleye',
     role: 'Project Manager',
     company: 'Onestop RX',
-    img: '',
+    img: '/assets/vee.jpeg',
     comment: [
       'Paul is a standout frontend engineer. His delivery is always top-notch because he brings real intention to his work. He doesn’t just go with the flow or ship for the sake of shipping. Everything he builds is thoughtful, well-crafted, and built to last.',
       'As a team lead, he leads by example. He’s hands-on, makes strong decisions, and creates an environment where people feel supported. What I respect most is how open he is to learning and unlearning. He’s always growing, always improving, and that mindset pushes the whole team forward.',
@@ -26,7 +26,7 @@ export const reviews = [
     lastName: 'Ezenwa',
     role: 'MD',
     company: 'Arieem Multimedia Limited',
-    img: '',
+    img: '/assets/emmanuel.jpeg',
     comment: [
       'Working with Paul was a great experience from start to finish. He understood our business goals, communicated clearly, and delivered a modern website that exceeded our expectations while staying on schedule.',
     ],

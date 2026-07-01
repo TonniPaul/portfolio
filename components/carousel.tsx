@@ -1,34 +1,31 @@
 'use client';
 
+import { Children, ReactNode, useId } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import type { SwiperProps } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import { Children, ReactNode, useId } from 'react';
 import SvgIcon from './svg-icon';
 
-type SwiperCarouselProps = {
+interface CarouselProps extends SwiperProps {
   children: ReactNode | ReactNode[];
   showNavigation?: boolean;
   showPagination?: boolean;
-  spaceBetween?: number;
-  slidesPerView?: number | 'auto';
-  loop?: boolean;
   className?: string;
-};
+}
 
 const Carousel = ({
   children,
   showNavigation = false,
   showPagination = false,
-  spaceBetween = 16,
-  slidesPerView = 1,
-  loop = false,
   className,
-}: SwiperCarouselProps) => {
+  modules,
+  ...swiperProps
+}: CarouselProps) => {
   const id = useId();
 
   return (
@@ -39,10 +36,8 @@ const Carousel = ({
           ...(showNavigation ? [Navigation] : []),
           ...(showPagination ? [Pagination] : []),
           Autoplay,
+          ...(modules ?? []),
         ]}
-        spaceBetween={spaceBetween}
-        slidesPerView={slidesPerView}
-        loop={loop}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
@@ -56,23 +51,27 @@ const Carousel = ({
             ? { el: '.carousel-pagination', clickable: true }
             : false
         }
+        {...swiperProps}
       >
         {Children.toArray(children).map((child, index) => (
           <SwiperSlide key={index}>{child}</SwiperSlide>
         ))}
 
-        <div className="flex justify-between items-center mt-6">
-          <div className="carousel-pagination flex gap-1" />
+        {(showNavigation || showPagination) && (
+          <div className="mt-6 flex items-center justify-between">
+            <div className="carousel-pagination flex gap-1" />
 
-          <div className="flex w-max ml-auto gap-2 *:border *:rounded-5 *:disabled:opacity-50">
-            <button className="prev p-2">
-              <SvgIcon name="chevron-down" className="rotate-90 w-6 h-6" />
-            </button>
-            <button className="next p-2">
-              <SvgIcon name="chevron-down" className="-rotate-90 w-6 h-6 " />
-            </button>
+            <div className="ml-auto flex w-max gap-2 *:rounded-5 *:border *:disabled:opacity-50">
+              <button className="prev p-2">
+                <SvgIcon name="chevron-down" className="h-6 w-6 rotate-90" />
+              </button>
+
+              <button className="next p-2">
+                <SvgIcon name="chevron-down" className="h-6 w-6 -rotate-90" />
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </Swiper>
     </div>
   );
