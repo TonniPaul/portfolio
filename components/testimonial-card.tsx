@@ -40,7 +40,7 @@ const TestimonialAuthor = ({
       </div>
 
       <div className="min-w-0">
-        <h3 className="truncate text-lg font-semibold">{fullName}</h3>
+        <h3 className=" md:text-lg font-semibold">{fullName}</h3>
         <p className="text-sm text-foreground/60">
           {role}, {company}.
         </p>
@@ -75,23 +75,25 @@ const TestimonialCard = ({
         }
       >
         <div className="app-padding relative isolate">
-          <TestimonialAuthor
-            firstName={firstName}
-            lastName={lastName}
-            role={role}
-            company={company}
-            img={img}
-          />
+          <div className="sticky top-0 left-0 z-1 bg-background py-3">
+            <TestimonialAuthor
+              firstName={firstName}
+              lastName={lastName}
+              role={role}
+              company={company}
+              img={img}
+            />
+          </div>
 
           <div className="app-divider" />
 
           <div className="flex gap-3 mt-5">
             <SvgIcon
               name="quote-left"
-              className="size-12 text-primary"
+              className="size-4 md:size-12 text-primary"
               aria-hidden
             />
-            <div className="space-y-5 flex-1 mt-8">
+            <div className="space-y-5 flex-1 mt-4 md:mt-8">
               {comment.map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
