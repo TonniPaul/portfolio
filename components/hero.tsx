@@ -9,7 +9,7 @@ import SectionBadge from './section-badge';
 
 const HeroSection = () => {
   return (
-    <section className="relative app-padding overflow-hidden w-full text-foreground min-h-screen">
+    <section className="relative app-padding overflow-hidden w-full text-foreground app-padding-b">
       <Motion
         as="div"
         animate={{
@@ -137,7 +137,7 @@ const HeroSection = () => {
 
           <div className="relative">
             <Lanyard
-              imageSrc="/assets/head-shot.jpg"
+              imageSrc="/assets/tonnipaul.png"
               qrCodeSrc="/assets/qr-code.png"
               name={NAME}
               skills={skills}

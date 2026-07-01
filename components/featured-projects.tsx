@@ -3,7 +3,6 @@ import Link from 'next/link';
 import SvgIcon from './svg-icon';
 import { Button } from './button';
 import Show from './show';
-import Motion from './motion';
 import { Project } from '@/types/project.type';
 import Skeleton from './skeleton';
 import Image from 'next/image';
@@ -137,14 +136,14 @@ const FeaturedProject = (project: Project) => {
           </Browser>
 
           <div className=" mt-10 flex flex-wrap gap-4 xl:hidden">
-            <Link href={project.website}>
+            <Link href={project.website} target="_blank">
               <Button withIcon tabIndex={-1}>
                 View Project
               </Button>
             </Link>
 
             <Show when={!!project.github}>
-              <Link href={project.github || '#'}>
+              <Link href={project.github || '#'} target="_blank">
                 <Button
                   withIcon
                   icon="github"
