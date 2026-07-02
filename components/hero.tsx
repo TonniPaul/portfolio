@@ -65,9 +65,8 @@ const HeroSection = () => {
           </Motion>
 
           <Motion as={'p'} className="mt-8 max-w-2xl md:text-lg">
-            Through thoughtful design and clean code, I create digital products
-            that make everyday experiences simpler, faster, and more meaningful
-            for the people who use them.
+            I build fast, intuitive web experiences that people actually enjoy
+            using.
           </Motion>
 
           <Motion
