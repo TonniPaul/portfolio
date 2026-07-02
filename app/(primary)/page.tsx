@@ -99,6 +99,7 @@ export default function Home() {
                 slidesPerGroup: 2,
               },
             }}
+            loop
           >
             {reviews.map((el, idx) => (
               <TestimonialCard

@@ -63,6 +63,6 @@
     "*.{js,jsx,ts,tsx,css,md}": "prettier --write"
   },
   "portless": {
-    "appPort": 3026
+    "appPort": 4000
   }
 }

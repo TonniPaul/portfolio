@@ -1,5 +1,18 @@
 export const reviews = [
   {
+    firstName: 'Chiamaka',
+    lastName: 'Ukwu',
+    role: 'Product/UI UX designer',
+    company: 'BLOCspace',
+    img: '/assets/fortune.jpeg',
+    comment: [
+      'I’ve had the opportunity to work with Paul since the beginning of my career, and he’s one of the best developers I’ve worked with.',
+      'Paul doesn’t just write code, he approaches development with both the product and the end user in mind. He has an exceptional ability to translate designs into pixel-perfect, high-quality experiences while also suggesting thoughtful improvements that enhance the final product.',
+      'Beyond his technical skills, Paul is highly collaborative, communicates clearly, and is someone you can rely on to deliver. Working with him has always been seamless because he consistently brings professionalism, attention to detail, and a genuine commitment to building great products.',
+      'I highly recommend Paul to any team looking for a talented, dependable, and thoughtful developer.',
+    ],
+  },
+  {
     firstName: 'Victoria',
     lastName: 'Ogunleye',
     role: 'Project Manager',
@@ -78,7 +91,7 @@ export const reviews = [
     lastName: 'Oluchi',
     role: 'Frontend Developer',
     company: 'Muchlearn',
-    img: '',
+    img: '/assets/peace.jpeg',
     comment: [
       'Paul is a joy to work with and a very particular persona. He strives to make things work and carries you along. He’s a great person.',
     ],
