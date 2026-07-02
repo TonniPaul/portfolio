@@ -100,11 +100,11 @@
   }
 
   .swiper-pagination-bullet {
-    @apply w-6! border! border-primary! rounded-[22369600px]! bg-primary cursor-pointer;
+    @apply w-2! md:w-6! border! border-primary! rounded-[22369600px]! bg-primary cursor-pointer;
   }
 
   .swiper-pagination-bullet-active {
-    @apply w-8! bg-primary!;
+    @apply w-3! md:w-8! bg-primary!;
   }
 }
 
@@ -149,6 +149,10 @@
 
 @utility app-input {
   @apply w-full rounded-xl border border-primary/20 bg-background px-4 pt-6 pb-2 outline-none transition focus:border-primary;
+}
+
+@utility app-divider {
+  @apply my-6  h-px bg-linear-to-r from-transparent via-primary/40  to-transparent;
 }
 
 @keyframes content-show {

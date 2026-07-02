@@ -22,7 +22,7 @@ const Browser = ({ children }: Props) => {
         duration: 1,
         ease: 'easeOut',
       }}
-      className="overflow-hidden rounded-4xl border border-primary/20 bg-primary-900 shadow-a-base h-fit"
+      className="overflow-hidden rounded-2xl border border-primary/20 bg-primary-900 shadow-a-base h-fit"
     >
       <div className="flex items-center gap-2 border-b border-primary/20 p-4">
         <div className="h-3 w-3 rounded-full bg-red-500" />

@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="my-8 h-px bg-linear-to-r from-transparent via-primary/20 to-transparent" />
+          <div className="app-divider" />
 
           <div className="flex flex-col items-center justify-between gap-4 text-center text-a-10 md:text-a-12 text-foreground/60 lmd:flex-row">
             <p>

@@ -9,7 +9,7 @@ import SectionBadge from './section-badge';
 
 const HeroSection = () => {
   return (
-    <section className="relative app-padding overflow-hidden w-full text-foreground min-h-screen">
+    <section className="relative app-padding overflow-hidden w-full text-foreground app-padding-b">
       <Motion
         as="div"
         animate={{
@@ -65,9 +65,8 @@ const HeroSection = () => {
           </Motion>
 
           <Motion as={'p'} className="mt-8 max-w-2xl md:text-lg">
-            Through thoughtful design and clean code, I create digital products
-            that make everyday experiences simpler, faster, and more meaningful
-            for the people who use them.
+            I build fast, intuitive web experiences that people actually enjoy
+            using.
           </Motion>
 
           <Motion
@@ -137,7 +136,7 @@ const HeroSection = () => {
 
           <div className="relative">
             <Lanyard
-              imageSrc="/assets/head-shot.jpg"
+              imageSrc="/assets/tonnipaul.png"
               qrCodeSrc="/assets/qr-code.png"
               name={NAME}
               skills={skills}
